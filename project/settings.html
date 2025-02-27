@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Settings - Guardian PI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/PiLogo.png" alt="Guardian PI Logo" class="logo">
+        </div>
+        <ul>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="notification.html">Notification</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="profile.html">Account</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <nav>
+                <a href="about.html">About Us</a>
+                <a href="data.html">Data</a>
+                <a href="notification.html">Notifications</a>
+                <a href="security.html">Security</a>
+                <a href="profile.html">Account</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+        </header>
+
+        <section>
+            <section class = "settings-section">
+            <h1>User Settings</h1>
+
+            <!-- Avatar Section -->
+            <div class="avatar">
+                <span>U</span> <!-- Placeholder for avatar initials -->
+            </div>
+
+            <!-- Form for User Details -->
+            <div class="input-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="Enter your first name">
+            </div>
+
+            <div class="input-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Enter your last name">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+
+            <!-- Edit Button -->
+            <button class="edit-btn">Edit</button>
+        </section>
+    </div>
+
+</body>
+</html>
