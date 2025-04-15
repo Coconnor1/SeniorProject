@@ -1,54 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification Center - Guardian PI</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Center - GuardianPi</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="layout">
+
     <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <img src="images/PiLogo.png" alt="Guardian PI Logo" class="logo">
-        </div>
-        <ul>
-            <li><a href="data.html">Data</a></li>
-            <li><a href="notification.html">Notification</a></li>
-            <li><a href="security.html">Security</a></li>
-            <li><a href="profile.html">Account</a></li>
-            <li><a href="settings.html">Settings</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </div>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/PiLogo.png" alt="GuardianPi Logo" />
+      </div>
+      <div class="sidebar-section">
+        <a href="about.html" class="icon">ℹ️</a>
+        <div class="separator"></div>
+        <a href="data.html" class="icon">📊</a>
+        <a href="notification.html" class="icon">🔔</a>
+        <a href="security.html" class="icon">🛡️</a>
+        <div class="separator"></div>
+        <a href="profile.html" class="icon">👤</a>
+        <a href="settings.html" class="icon">🎛️</a>
+      </div>
+    </aside>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <header>
-            <nav>
-                <a href="data.html">Data</a>
-                <a href="notification.html">Notifications</a>
-                <a href="security.html">Security</a>
-                <a href="profile.html">Account</a>
-                <a href="settings.html">Settings</a>
-            </nav>
+    <main class="main">
+      <div class="main-inner">
+
+        <!-- Top Navigation -->
+        <header class="topnav">
+          <nav class="nav-sections">
+            <div class="nav-left">
+              <a href="about.html">About Us</a>
+              <a href="data.html">Data</a>
+              <a href="notification.html">Alerts</a>
+            </div>
+
+            <h1>GuardianPi</h1>
+
+            <div class="nav-right">
+              <a href="security.html">Security</a>
+              <a href="profile.html">Account</a>
+              <a href="settings.html">Settings</a>
+            </div>
+          </nav>
         </header>
 
-        <div class="notification-container">
-            <h1>Welcome to the Notification Center</h1>
-            <p>No new notifications yet.</p>
+        <!-- Notification Center -->
+        <section class="notification-container" style="margin-top: 60px;">
+          <h2 style="margin-bottom: 20px;">Notification Center</h2>
 
-            <!-- Example Notification Cards (Empty for now) -->
-            <div class="notification-card">
-                <p><strong>Motion Detected</strong></p>
-                <p>Motion was detected on GuardianPI at 3:00pm.</p>
-            </div>
-            <div class="notification-card">
-                <p><strong>Face Recognition</strong></p>
-                <p>Unknown face detected at 4:00 PM.</p>
-            </div>
-        </div>
-    </div>
+          <div class="notification-entry" style="margin-bottom: 20px;">
+            <strong>📢 Motion Detected</strong>
+            <p>Motion detected at the back entrance – April 15, 2025, 3:00 PM</p>
+          </div>
 
+          <div class="notification-entry" style="margin-bottom: 20px;">
+            <strong>🔍 Face Recognition</strong>
+            <p>Unknown face detected – April 15, 2025, 4:00 PM</p>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+
+  </div>
 </body>
 </html>

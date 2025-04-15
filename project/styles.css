@@ -1,378 +1,481 @@
-/* Basic Reset */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body Styling */
-body {
-    display: flex;
-    height: 100vh;
-    background: #f4f4f4;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+html, body {
+  height: 100%;
+  font-family: 'Oxygen Mono', monospace;
+  background-color: #fff;
 }
 
-/* Sidebar Styles */
+/* Layout */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-
-.sidebar-header {
-    text-align: center;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #000;
-    width: fit-content;
-    margin: 0 auto;
-    margin-left: 45px;
+  width: 100px;
+  background-color: #4a4a4a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
 }
 
 .logo {
-    width: 100px;
-    border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
 }
 
-.sidebar ul {
-    list-style-type: none;
-    padding-left: 0;
-    width: 100%;
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.sidebar ul li {
-    padding: 15px;
-    width: 100%;
-    text-align: left;
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
 }
 
-.sidebar ul li a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    font-size: 18px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
+.icon {
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.sidebar ul li:hover {
-    background-color: #575757;
-    transition: 0.3s;
+.separator {
+  width: 30px;
+  border-top: 2px solid white;
+  margin: 10px 0;
 }
 
-/* Main Content Styles */
-.main-content {
-    margin-left: 250px;
-    flex: 1;
-    padding: 20px;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+/* Main content wrapper */
+.main {
+  flex: 1;
+  overflow-y: auto;
 }
 
-header nav {
-    background-color: #333;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: right;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden; /* Prevent horizontal scrolling */
+.main-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    display: inline-block;
-    white-space: nowrap; /* Prevent wrapping */
+/* Top navigation */
+.topnav {
+  padding: 20px 0;
+  text-align: center;
 }
 
-header nav a:hover {
-    text-decoration: underline;
-    background-color: #575757;
-    padding: 5px;
+.topnav nav.nav-sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 40px;
 }
 
-/* Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+.topnav h1 {
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
 }
 
-th, td {
-    padding: 10px;
-    text-align: left;
+/* Welcome box */
+.welcome {
+  margin: 60px auto 50px auto;
+  padding: 15px 30px;
+  border: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  max-width: 450px;
+  width: 100%;
 }
 
-th {
-    background-color: #f2f2f2;
+
+/* Cards */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 40px 60px 40px;
+  gap: 45px;
+  margin-top: 40px;
 }
 
-/* Login Page Styling */
-.login-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
+.card {
+  width: 700px;
+  height: 300px;
+  background-color: #d9d9d9;
+  border: 2px solid black;
+  position: relative;
 }
 
-.input-group {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
+.card-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
 }
 
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.divider {
+  width: 1px;
+  background-color: #444;
+  height: 100%;
+  margin: 0 10px;
 }
 
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.sidebar .icon {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
 }
 
-.submit-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
+.sidebar .icon:hover {
+  transform: scale(1.2);
 }
 
-.submit-btn:hover {
-    background-color: #45a049;
+/* Notification Entries */
+.notification-entry {
+  background-color: #f2f2f2;
+  border-left: 5px solid #4a4a4a;
+  padding: 15px 20px;
+  border-radius: 6px;
+  font-family: 'Oxygen Mono', monospace;
+  transition: background-color 0.3s ease;
 }
 
-/* User Settings Styling */
-.avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-color: #ddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #fff;
+.notification-entry:hover {
+  background-color: #e6e6e6;
 }
 
-.edit-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
+.notification-entry strong {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.edit-btn:hover {
-    background-color: #45a049;
+.notification-entry p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
 }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-    }
-
-    .main-content {
-        margin-left: 200px;
-    }
-
-    header nav {
-        padding: 5px;
-    }
-
-    header nav a {
-        font-size: 14px;
-        margin: 0 10px;
-    }
+/* Optional dismiss button */
+.dismiss-btn {
+  float: right;
+  background-color: transparent;
+  border: none;
+  color: #999;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.settings-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 80px); /* Adjust height considering the header */
-    padding: 20px;
+.dismiss-btn:hover {
+  color: #333;
 }
 
-/* Login Container */
-.login-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    background: #f4f4f4;
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any padding */
+/* Data Table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Oxygen Mono', monospace;
+  margin-top: 20px;
 }
 
-/* The login box styling (adjusted to be more centered to the left) */
-.login-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    margin: 0 20px; /* Adjusting margins to move the box left */
-    transform: translateX(-25%); /* Move box further to the left */
+.data-table th, .data-table td {
+  border: 1px solid #999;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
 }
 
-.notification-container {
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+.data-table th {
+  background-color: #4a4a4a;
+  color: white;
 }
 
-.notification-container h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.data-table tr:nth-child(even) {
+  background-color: #f5f5f5;
 }
 
-/* Notification Card */
-.notification-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+.about-section {
+  margin-top: 40px;
+  padding: 20px 40px 60px 40px;
+  font-family: 'Oxygen Mono', monospace;
+  color: #333;
+  text-align: center;
+  font-size: 30px;
 }
 
-/* Notification Content */
-.notification-card p {
-    margin: 5px 0;
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
 }
 
-.notification-card strong {
-    font-weight: bold;
+.about-image {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 10px;
 }
 
-.security-settings {
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+.about-section p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
 
-/* Title of Security Section */
-.security-settings h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.about-values {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
 }
 
-/* Logs Section */
+.about-values li {
+  background-color: #f2f2f2;
+  border-left: 5px solid #4a4a4a;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.security-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Oxygen Mono', monospace;
+  color: #333;
+}
+
 .security-logs {
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+  margin-bottom: 50px;
 }
 
-/* Table Styling for Logs */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+.security-logs h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+.security-logs table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f5f5f5;
+  border: 2px solid black;
 }
 
-th, td {
-    padding: 10px;
-    text-align: left;
+.security-logs th,
+.security-logs td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
 }
 
-th {
-    background-color: #f2f2f2;
+.security-logs th {
+  background-color: #ddd;
 }
 
-/* Form Styling */
-form {
-    display: flex;
-    flex-direction: column;
+.security-settings h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
-/* Label Styling */
-label {
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: bold;
+.security-settings form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin-top: 10px;
 }
 
-/* Input Fields Styling */
-input[type="password"] {
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.security-settings input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #fff;
 }
 
-/* Submit Button Styling */
 .submit-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .submit-btn:hover {
-    background-color: #45a049;
+  background-color: #333;
 }
 
-.about-us-description {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+/* Settings Page */
+.settings {
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.about-us-description p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #333;
+.settings h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.settings-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.settings-form label {
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.settings-form input {
+  width: 250px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.settings-form button {
+  padding: 10px 20px;
+  font-family: 'Oxygen Mono', monospace;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.settings-form .deactivate {
+  color: #a33;
+  background-color: white;
+  border: 1px solid #a33;
+}
+
+.settings-form .delete {
+  color: white;
+  background-color: #a33;
+  border: 1px solid #a33;
+}
+
+.settings-form .save-btn {
+  background-color: #d9d9d9;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Account Settings Page Styles */
+.account-settings {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.account-settings h2 {
+  font-size: 1.8rem;
+  font-family: 'Oxygen Mono', monospace;
+  margin-bottom: 30px;
+}
+
+.avatar-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.avatar-circle {
+  width: 130px;
+  height: 130px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-avatar {
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #333;
+  padding: 6px 14px;
+  font-family: 'Oxygen Mono', monospace;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.account-form label {
+  text-align: left;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.account-form input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 8px 4px;
+  font-size: 1rem;
+  background: none;
+}
+
+.save-btn {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #d9d9d9;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
 }

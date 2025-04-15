@@ -1,67 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Guardian PI</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account Settings - GuardianPi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <div class="layout">
     <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <img src="images/PiLogo.png" alt="Guardian PI Logo" class="logo">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/PiLogo.png" alt="GuardianPi Logo" />
+        <div class="sidebar-section">
+          <a href="/project/about.html" class="icon">ℹ️</a>
+          <div class="separator"></div>
+          <a href="/project/data.html" class="icon">📊</a>
+          <a href="/project/notification.html" class="icon">🔔</a>
+          <a href="/project/security.html" class="icon">🛡️</a>
+          <div class="separator"></div>
+          <a href="/project/profile.html" class="icon">👤</a>
+          <a href="/project/settings.html" class="icon">🎛️</a>
         </div>
-        <ul>
-            <li><a href="data.html">Data</a></li>
-            <li><a href="notification.html">Notification</a></li>
-            <li><a href="security.html">Security</a></li>
-            <li><a href="profile.html">Account</a></li>
-            <li><a href="settings.html">Settings</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </div>
+      </div>
+    </aside>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <header>
-            <nav>
-                <a href="about.html">About Us</a>
-                <a href="data.html">Data</a>
-                <a href="notification.html">Notifications</a>
-                <a href="security.html">Security</a>
-                <a href="profile.html">Account</a>
-                <a href="settings.html">Settings</a>
-            </nav>
+    <main class="main">
+      <div class="main-inner">
+        <!-- Top Nav -->
+        <header class="topnav">
+          <nav class="nav-sections">
+            <div class="nav-left">
+              <a href="/project/about.html">About Us</a>
+              <a href="/project/data.html">Data</a>
+              <a href="/project/notification.html">Alerts</a>
+            </div>
+            <h1>GuardianPi</h1>
+            <div class="nav-right">
+              <a href="/project/security.html">Security</a>
+              <a href="/project/profile.html">Account</a>
+              <a href="/project/settings.html">Settings</a>
+            </div>
+          </nav>
         </header>
 
-        <!-- Login Section -->
-        <div class="login-container">
-            <div class="login-box">
-                <h1>Guardian PI</h1>
+        <!-- Account Settings Content -->
+        <section class="account-settings">
+          <h2>Account Settings</h2>
 
-                <!-- Login Form -->
-                <form action="#" method="POST">
-                    <!-- Username Field -->
-                    <div class="input-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                    </div>
+          <div class="avatar-block">
+            <div class="avatar-circle">👤</div>
+            <button class="edit-avatar">Edit</button>
+          </div>
 
-                    <!-- Password Field -->
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                    </div>
+          <form class="account-form">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="Enter your first name">
 
-                    <!-- Submit Button -->
-                    <button type="submit" class="submit-btn">Log In</button>
-                </form>
-            </div>
-        </div>
-    </div>
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="Enter your last name">
 
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+
+            <button type="submit" class="save-btn">Save</button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
+
 

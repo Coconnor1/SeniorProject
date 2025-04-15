@@ -1,49 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guardian PI</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GuardianPi</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <div class="layout">
     <!-- Sidebar -->
-    <div class="sidebar">
-        <div class = "sidebar-header">
-            <img src = "images/PiLogo.png" alt = "Guardian PI Logo" class = "logo">
-        </div>
-        <ul>
-            <li><a href="data.html"><i class=""></i> Data</a></li>
-            <li><a href="notification.html"><i class=""></i> Notification</a></li>
-            <li><a href="security.html"><i class=""></i> Security</a></li>
-            <li><a href="profile.html"><i class=""></i> Account</a></li>
-            <li><a href="settings.html"><i class=""></i> Settings</a></li>
-            <li><a href="about.html"><i class=""></i> About Us</a></li>
-        </ul>
-    </div>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/PiLogo.png" alt="GuardianPi Logo" />
+      </div> <!-- ✅ this was the fix -->
 
-    
-    <div class="main-content">
-        <header>
-            <nav>
-                <a href="about.html">About Us</a>
-                <a href="data.html">Data</a>
-                <a href="notification.html">Notifications</a>
-                <a href="security.html">Security</a>
-                <a href="profile.html">Account</a>
-                <a href="settings.html">Settings</a>
+      <div class="sidebar-section">
+        <a href="/project/about.html" class="icon">ℹ️</a>
+        <div class="separator"></div>
+        <a href="/project/data.html" class="icon">📊</a>
+        <a href="/project/notification.html" class="icon">🔔</a>
+        <a href="/project/security.html" class="icon">🛡️</a>
+        <div class="separator"></div>
+        <a href="/project/profile.html" class="icon">👤</a>
+        <a href="/project/settings.html" class="icon">🎛️</a>
+      </div>
+    </aside>
 
+    <!-- Main Content -->
+    <main class="main">
+      <div class="main-inner">
+        <!-- Top Nav -->
+        <header class="topnav">
+          <nav class="nav-sections">
+            <div class="nav-left">
+              <a href="/project/aboutUs.html">About Us</a>
+              <a href="/project/data.html">Data</a>
+              <a href="/project/notification.html">Alerts</a>
+            </div>
 
-            </nav>
+            <h1>GuardianPi</h1>
+
+            <div class="nav-right">
+              <a href="/project/security.html">Security</a>
+              <a href="/project/profile.html">Account</a>
+              <a href="/project/settings.html">Settings</a>
+            </div>
+          </nav>
         </header>
 
-        <section>
-            <h1>Welcome to Guardian PI</h1>
-            <p>dashboard.</p>
-        </section>
-    </div>
+        <!-- Welcome Box -->
+        <div class="welcome">
+          <h2>Welcome, {User}!</h2>
+        </div>
 
+        <!-- Main Cards -->
+        <section class="content">
+          <div class="card"><span class="card-icon">📊</span></div>
+          <div class="divider"></div>
+          <div class="card"><span class="card-icon">🔔</span></div>
+          <div class="divider"></div>
+          <div class="card"><span class="card-icon">🛡️</span></div>
+        </section>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
